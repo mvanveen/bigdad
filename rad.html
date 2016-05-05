@@ -1,0 +1,26 @@
+<script src='node_modules/p5/lib/p5.js'></script>
+<script src='node_modules/p5/lib/addons/p5.dom.js'></script>
+
+<script>
+
+function preload() {
+  img = loadImage('rainicorn.png');
+}
+
+function setup() {
+  capture = createCapture(VIDEO);
+
+  resizeCanvas(windowWidth, windowHeight);
+  frameRate(30);
+  image(img,windowWidth/2, windowHeight/2);
+
+}
+
+
+function draw() {
+  //resizeCanvas(windowWidth, windowHeight);
+  image(capture, 0, 0, width, width*capture.height/capture.width);
+  image(img,mouseX - img.width, mouseY);
+}
+
+</script>
