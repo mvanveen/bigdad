@@ -1,4 +1,5 @@
 <script src='node_modules/p5/lib/p5.js'></script>
+<script src='node_modules/p5/lib/addons/p5.dom.js'></script>
 
 <script>
 
@@ -19,6 +20,8 @@ sayings = [
 ];
 
 function setup() {
+  capture = createCapture(VIDEO);
+
   resizeCanvas(windowWidth, windowHeight);
   frameRate(5);
   saying = sayings[parseInt(random(sayings.length))];
@@ -27,6 +30,8 @@ function setup() {
 
 function draw() {
   //resizeCanvas(windowWidth, windowHeight);
+  image(capture, 0, 0, width, width*capture.height/capture.width);
+
   if (random(10) > 2) {
       background(random(10,155), random(100,120), random(100,200));
       saying = sayings[parseInt(random(sayings.length))];
