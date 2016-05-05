@@ -1,0 +1,17 @@
+{
+  "name": "big_dad",
+  "version": "0.0.0",
+  "description": "who is big dad?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://github.com/mvanveen/bigdad",
+  "author": "",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "7622ea27b8262acb645d4af7c415b7dc3ba419b0",
+  "dependencies": {
+    "p5": "^0.5.0"
+  }
+}
