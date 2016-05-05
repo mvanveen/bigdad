@@ -5,35 +5,43 @@
 sayings = [
    "who is your dad now",
    "dadaconf",
-   "many dada",
    "if you see dada say dada",
    "who is big dad?",
-   "Protect the brand #dadaconf"
+   "Protect the brand \n#dadaconf",
+   "Protect the brand \n#dadaconf",
+   "Protect the brand \n#dadaconf",
+   "dad driven",
+   "am i your dad",
+   "dads are rad",
+   "dads are bad",
+   "dada driven",
+   "what are dada",
 ];
 
 function setup() {
   resizeCanvas(windowWidth, windowHeight);
-  frameRate(10);
+  frameRate(5);
+  saying = sayings[parseInt(random(sayings.length))];
 }
 
 
 function draw() {
   //resizeCanvas(windowWidth, windowHeight);
-  if (random(10) > 5) {
-      background(random(100,255), random(100,120), random(100,200));
+  if (random(10) > 2) {
+      background(random(10,155), random(100,120), random(100,200));
+      saying = sayings[parseInt(random(sayings.length))];
   }
   for (i = 0; i < 20; i++) {
+      
       textFont("Comic Sans MS");
       textSize(parseInt(random(12,40)));
       fill(random(22,240), random(22,260), random(20, 255));
       text(sayings[parseInt(random(sayings.length))] ,random(windowWidth),random(windowHeight));
   
      fill(255, 255, 255)
-     textSize(100);
+     textSize(80);
      textFont("Helvetica");
-     text("dadaconf", windowWidth/2 - 200, windowHeight/2);
-     textSize(20);
-     text("if you see something say something", windowWidth/2 - 160, windowHeight/2 + 50);
+     text(saying, windowWidth/2 - 400, windowHeight/2);
 }}
 
 </script>
